@@ -1,10 +1,16 @@
 package Generics;
 
-public abstract class GeometricObjectCompare <E> implements Comparable<E> {
+public abstract class GeometricObjectCompare<E> implements Comparable<E> {
 
 	@Override
 	public int compareTo(E o) {
-		return(Double.compare(this.getArea(),((GeometricObjectCompare<E>) o).getArea()));
+		if(this.getArea() > ((GeometricObjectCompare) o).getArea()) {
+			return 1;
+		}
+		if(this.getArea() == ((GeometricObjectCompare) o).getArea()) {
+			return 0;
+		}
+		return -1;
 	}
 	
 	public abstract double getArea();
@@ -16,10 +22,6 @@ public abstract class GeometricObjectCompare <E> implements Comparable<E> {
 	}
 
 
-//	Променете класа GeometricObject и имплементирайте
-//	интерфейса Comparable, който да сравнява лицата на обектите.
-//	Тествайте GenericSort с няколко обекта от класа Circle и  Rectangle.
-//	Принтирайте сортирания масив. Обърнете внимание, че методът toString() трябва
-//	да се overrifde-не в Circle и  Rectangle, за да работи методът printList()
+
 
 }

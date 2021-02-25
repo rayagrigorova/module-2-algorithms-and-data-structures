@@ -5,6 +5,8 @@ import java.util.Random;
 
 public class GenericSort {
 	public static void main(String[] args) {
+//		Тествайте GenericSort с няколко обекта от класа Circle и  Rectangle.
+//		Принтирайте сортирания масив. Обърнете внимание
 // Create an Integer array
 		Integer[] intArray = { new Integer(2), new Integer(4), new Integer(3) };
 // Create a Double array
@@ -35,7 +37,6 @@ public class GenericSort {
 		System.out.print("Sorted String objects: ");
 		printList(stringArray);
 		
-//Display new arrays
 		System.out.print("Sorted circle objects: ");
 		printList(circleArray);
 		System.out.print("Sorted rectangle objects: ");
@@ -80,7 +81,6 @@ public class GenericSort {
 		int currentMinIndex;
 
 		for (int i = 0; i < list.length - 1; i++) {
-// Find the minimum in the list[i+1..list.length−2]
 			currentMin = list[i];
 			currentMinIndex = i;
 			for (int j = i + 1; j < list.length; j++) {
@@ -129,7 +129,7 @@ public class GenericSort {
 		for (int i = 0; i < list.size() - 1; i++) {
 			for (int j = 0; j < list.size() - i - 1; j++) {
 				//If the previous is smaller 
-				if(list.get(j).compareTo(list.get(j + 1)) < 0) {
+				if(list.get(j).compareTo(list.get(j + 1)) > 0) {
 					temp = list.get(j);
 					list.set(j, list.get(j + 1));
 					list.set(j + 1, temp);
@@ -138,6 +138,7 @@ public class GenericSort {
 		}
 		
 	}
+
 	public static <E extends Comparable<E>> E min(ArrayList<E> list) {
 		E min = list.get(0);
 		for(int i = 1; i < list.size(); i++) {
@@ -147,7 +148,6 @@ public class GenericSort {
 			}
 		}
 		return min;
-	
 		
 	}
 }
