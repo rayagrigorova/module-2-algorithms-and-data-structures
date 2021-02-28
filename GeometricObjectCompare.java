@@ -1,9 +1,9 @@
 package Generics;
 
-public abstract class GeometricObjectCompare<E> implements Comparable<E> {
+public abstract class GeometricObjectCompare implements Comparable<GeometricObjectCompare> {
 
 	@Override
-	public int compareTo(E o) {
+	public int compareTo(GeometricObjectCompare o) {
 		if(this.getArea() > ((GeometricObjectCompare) o).getArea()) {
 			return 1;
 		}
@@ -20,8 +20,5 @@ public abstract class GeometricObjectCompare<E> implements Comparable<E> {
 		if(x.compareTo(y) == 1 || x.compareTo(y) == 0) return x;	
 		return y;
 	}
-
-
-
 
 }

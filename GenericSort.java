@@ -5,8 +5,7 @@ import java.util.Random;
 
 public class GenericSort {
 	public static void main(String[] args) {
-//		Тествайте GenericSort с няколко обекта от класа Circle и  Rectangle.
-//		Принтирайте сортирания масив. Обърнете внимание
+
 // Create an Integer array
 		Integer[] intArray = { new Integer(2), new Integer(4), new Integer(3) };
 // Create a Double array
@@ -15,9 +14,11 @@ public class GenericSort {
 		Character[] charArray = { new Character('a'), new Character('J'), new Character('r') };
 // Create a String array
 		String[] stringArray = { "Tom", "Susan", "Kim" };
-//Create a rectangle and circle array
-		CircleCompare [] circleArray = {new CircleCompare(34), new CircleCompare(2), new CircleCompare(44), new CircleCompare(10), new CircleCompare(3) };
-		RectangleCompare [] rectangleArray = {new RectangleCompare(10, 5), new RectangleCompare(2, 6), new RectangleCompare(73, 3), new RectangleCompare(12, 3)};
+		
+//Create a geometric object array
+		GeometricObjectCompare[] geometricArray = {new CircleCompare(34), new CircleCompare(2), new CircleCompare(44), new CircleCompare(10), new CircleCompare(1),
+				new RectangleCompare(10, 5), new RectangleCompare(2, 6), new RectangleCompare(73, 3), new RectangleCompare(12, 3)
+		};
 
 //Sort the arrays
 		sort(intArray);
@@ -25,8 +26,7 @@ public class GenericSort {
 		sort(charArray);
 		sort(stringArray);
 		
-		sort(circleArray);
-		sort(rectangleArray);
+		sort(geometricArray);
 // Display the sorted arrays
 		System.out.print("Sorted Integer objects: ");
 		printList(intArray);
@@ -37,42 +37,41 @@ public class GenericSort {
 		System.out.print("Sorted String objects: ");
 		printList(stringArray);
 		
-		System.out.print("Sorted circle objects: ");
-		printList(circleArray);
-		System.out.print("Sorted rectangle objects: ");
-		printList(rectangleArray);
+		System.out.print("Sorted geometric objects: ");
+		printList(geometricArray);
+
 		
-//Functions from problem 2
+//Problem 2
 		System.out.print("\n\n");
-		ArrayList<CircleCompare> circleArrayList = new ArrayList <CircleCompare>();
-		circleArrayList.add(new CircleCompare(2));
-		circleArrayList.add(new CircleCompare(37));
-		circleArrayList.add(new CircleCompare(84));
-		circleArrayList.add(new CircleCompare(12));
-		circleArrayList.add(new CircleCompare(1));
-		circleArrayList.add(new CircleCompare(25));
-		System.out.println(circleArrayList.toString());
-		shuffle(circleArrayList);
-		System.out.println("Shuffled: " + circleArrayList.toString());
-		sort(circleArrayList);
-		System.out.println("Sorted:" + circleArrayList.toString());
-		System.out.println("Min: " + min(circleArrayList));
+		ArrayList<GeometricObjectCompare> geometricArrayList = new ArrayList <GeometricObjectCompare>();
+		geometricArrayList.add(new CircleCompare(2));
+		geometricArrayList.add(new CircleCompare(37));
+		geometricArrayList.add(new CircleCompare(84));
+		geometricArrayList.add(new CircleCompare(12));
+		geometricArrayList.add(new CircleCompare(1));
+		geometricArrayList.add(new CircleCompare(25));
+		System.out.println(geometricArrayList.toString());
+		shuffle(geometricArrayList);
+		System.out.println("Shuffled: " + geometricArrayList.toString());
+		sort(geometricArrayList);
+		System.out.println("Sorted:" + geometricArrayList.toString());
+		System.out.println("Min: " + min(geometricArrayList));
 		
 		System.out.print("\n\n");
-		ArrayList<RectangleCompare> rectangleArrayList = new ArrayList <RectangleCompare>();
-		rectangleArrayList.add(new RectangleCompare(3, 6));
-		rectangleArrayList.add(new RectangleCompare(31, 1));
-		rectangleArrayList.add(new RectangleCompare(23, 5));
-		rectangleArrayList.add(new RectangleCompare(82, 45));
-		rectangleArrayList.add(new RectangleCompare(1, 5));
-		rectangleArrayList.add(new RectangleCompare(25, 2));
-		rectangleArrayList.add(new RectangleCompare(24, 23));
-		System.out.println(rectangleArrayList.toString());
-		shuffle(rectangleArrayList);
-		System.out.println("Shuffled: " + rectangleArrayList.toString());
-		sort(rectangleArrayList);
-		System.out.println("Sorted:" + rectangleArrayList.toString());
-		System.out.println("Min: " + min(rectangleArrayList));
+		geometricArrayList.add(new RectangleCompare(3, 6));
+		geometricArrayList.add(new RectangleCompare(31, 1));
+		geometricArrayList.add(new RectangleCompare(23, 5));
+		geometricArrayList.add(new RectangleCompare(82, 45));
+		geometricArrayList.add(new RectangleCompare(1, 5));
+		geometricArrayList.add(new RectangleCompare(25, 2));
+		geometricArrayList.add(new RectangleCompare(24, 23));
+		System.out.println(geometricArrayList.toString());
+		shuffle(geometricArrayList);
+		System.out.println("Shuffled: " + geometricArrayList.toString());
+		sort(geometricArrayList);
+		System.out.println("Sorted:" + geometricArrayList.toString());
+		System.out.println("Min: " + min(geometricArrayList));
+		
 	}
 	
 	

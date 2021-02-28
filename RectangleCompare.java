@@ -1,6 +1,6 @@
 package Generics;
 
-public class RectangleCompare <E> extends GeometricObjectCompare <E> {
+public class RectangleCompare extends GeometricObjectCompare {
 	private double x, y;
 	
 	public RectangleCompare(){

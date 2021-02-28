@@ -1,6 +1,6 @@
 package Generics;
 
-public class CircleCompare  <E> extends GeometricObjectCompare<E> {
+public class CircleCompare extends GeometricObjectCompare{
 	private double radius;
 	
 	public double getRadius() {
